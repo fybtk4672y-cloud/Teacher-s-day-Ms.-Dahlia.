@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For Ms. Dahlia 💻✨</title>
+<style>
+:root{--bg:#07111f;--panel:#0c1c2d;--cyan:#78e6ff;--mint:#9fffd8;--text:#f6fbff;--muted:#b8c9d8;--line:rgba(120,230,255,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0,#12304a 0,transparent 35%),radial-gradient(circle at 90% 30%,#10342d 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(120,230,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(120,230,255,.035) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--mint));width:0;z-index:20}
+section{min-height:100svh;padding:80px 22px;display:grid;place-items:center;position:relative}.wrap{width:min(900px,100%);text-align:center}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:9px 14px;color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;font-size:12px;background:#07111faa}
+h1{font-size:clamp(48px,11vw,96px);line-height:.92;margin:22px 0 16px;letter-spacing:-.055em}.gradient{background:linear-gradient(90deg,#fff,var(--cyan),var(--mint));-webkit-background-clip:text;color:transparent}
+h2{font-size:clamp(34px,7vw,64px);letter-spacing:-.04em;margin:0 0 20px}.lead{font-size:clamp(18px,3vw,24px);line-height:1.65;color:var(--muted);max-width:720px;margin:auto}
+button{border:0;cursor:pointer;font:inherit}.open{margin-top:32px;padding:16px 25px;border-radius:16px;background:linear-gradient(135deg,var(--cyan),var(--mint));color:#04121b;font-weight:800;box-shadow:0 15px 45px rgba(120,230,255,.18);transition:.25s}.open:hover{transform:translateY(-3px) scale(1.02)}
+.terminal{margin:36px auto 0;text-align:left;max-width:660px;border:1px solid var(--line);background:#07111fd9;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px #0008}.bar{padding:12px 16px;background:#102438;border-bottom:1px solid var(--line);display:flex;gap:7px}.dot{width:10px;height:10px;border-radius:50%;background:#547083}.code{padding:24px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#d9f8ff;line-height:1.9}.c{color:#7d9aaa}.k{color:var(--cyan)}.v{color:var(--mint)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}.card{text-align:left;border:1px solid var(--line);background:linear-gradient(145deg,#102438aa,#081522cc);padding:23px;border-radius:22px;min-height:165px;transition:.25s;cursor:pointer}.card:hover,.card.active{transform:translateY(-4px);border-color:#78e6ff88;box-shadow:0 16px 50px #0005}.card .icon{font-size:28px}.card h3{margin:12px 0 7px;font-size:20px}.card p{color:var(--muted);line-height:1.55;margin:0}.hidden{max-height:0;overflow:hidden;opacity:0;transition:.4s}.card.active .hidden{max-height:150px;opacity:1;margin-top:12px}
+.letter{text-align:left;border:1px solid var(--line);background:#f7fbff;color:#15202a;padding:clamp(25px,6vw,58px);border-radius:28px;box-shadow:0 30px 100px #0007}.letter p{font-family:Georgia,serif;font-size:clamp(17px,2.4vw,21px);line-height:1.85}.letter h2{color:#0a3042}.signature{margin-top:35px;font-weight:800;color:#0c6071}
+.quiz{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}.choice{padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:#0c1c2d;color:white}.choice:hover{border-color:var(--cyan)}#answer{min-height:35px;margin-top:20px;color:var(--mint);font-weight:700}
+.heart{font-size:68px;cursor:pointer;display:inline-block;filter:drop-shadow(0 0 20px #78e6ff66);transition:.25s}.heart:hover{transform:scale(1.12)}#secret{max-width:620px;margin:20px auto 0;opacity:0;transform:translateY(12px);transition:.6s;color:var(--muted);font-size:20px;line-height:1.7}#secret.show{opacity:1;transform:none}
+.particle{position:fixed;pointer-events:none;z-index:50;font-size:20px;animation:fly 1.2s ease-out forwards}@keyframes fly{to{transform:translate(var(--x),var(--y)) rotate(180deg) scale(.2);opacity:0}}
+footer{padding:40px;text-align:center;color:#7890a2}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.letter{border-radius:20px}section{padding:65px 18px}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<section id="hero">
+<div class="wrap">
+<span class="badge">A tiny program written with gratitude</span>
+<h1>For <span class="gradient">Ms. Dahlia.</span></h1>
+<p class="lead">Some teachers teach you how to write code.<br>Some teach you that it’s completely okay not to know it yet.</p>
+<div class="terminal">
+<div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<div class="code"><span class="c"># teacher_appreciation.py</span><br><span class="k">teacher</span> = <span class="v">"Ms. Dahlia"</span><br><span class="k">qualities</span> = [<span class="v">"patient"</span>, <span class="v">"kind"</span>, <span class="v">"gentle"</span>]<br><span class="k">student</span> = <span class="v">"Zoha"</span><br><br><span class="k">print</span>(<span class="v">"Thank you for making learning feel safe."</span>)</div>
+</div>
+<button class="open" onclick="start()">Run the surprise &nbsp;▶</button>
+</div>
+</section>
+
+<section id="memories">
+<div class="wrap">
+<span class="badge">Things I noticed</span>
+<h2>It was never <span class="gradient">just Python.</span></h2>
+<p class="lead">Tap each little memory. 💻</p>
+<div class="grid">
+<div class="card" onclick="toggle(this,event)"><div class="icon">🌱</div><h3>Starting from zero</h3><p>You never made me feel bad for not knowing Python before.</p><div class="hidden">You simply helped me begin — patiently, normally, and without making me feel behind.</div></div>
+<div class="card" onclick="toggle(this,event)"><div class="icon">🫶</div><h3>Your gentleness</h3><p>You’re so sweet that it genuinely feels like you could never get angry.</p><div class="hidden">The way you explain things calmly makes the classroom feel comfortable instead of stressful.</div></div>
+<div class="card" onclick="toggle(this,event)"><div class="icon">🎮</div><h3>The little moments</h3><p>Even when we’re playing games, you come to get us and look after us.</p><div class="hidden">Those tiny things say a lot about how much you care about your students.</div></div>
+<div class="card" onclick="toggle(this,event)"><div class="icon">✨</div><h3>Making room to breathe</h3><p>You work with us, teach us, and still give us space when we’re finished.</p><div class="hidden">You make Computer class feel like somewhere I can learn without being afraid to make mistakes.</div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<span class="badge">Quick debugging question</span>
+<h2>What happens when a student<br>doesn't know something yet?</h2>
+<div class="quiz">
+<button class="choice" onclick="answer(false)">❌ Judge them</button>
+<button class="choice" onclick="answer(false)">😤 Get angry</button>
+<button class="choice" onclick="answer(true)">💙 Teach them patiently</button>
+</div>
+<div id="answer"></div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<article class="letter">
+<span class="badge">A letter from Zoha</span>
+<h2>Dear Ms. Dahlia,</h2>
+<p>When I first came to this school, there were already so many new things to adjust to. Computer class could easily have been another thing that made me feel behind, especially because I hadn’t learned Python before.</p>
+<p>But you never made me feel embarrassed about that. You didn’t judge me for what I didn’t know. You simply explained, helped me understand, and gave me the space to learn.</p>
+<p>I really appreciate that you teach me in English and make sure I can follow along. You explain things so gently, and somehow you make learning something unfamiliar feel much less scary.</p>
+<p>One of the things I admire most about you is how kind you are. You don’t scold us or make the classroom feel tense. You’re so patient and sweet with everyone — sometimes so sweet that I honestly feel bad when the girls don’t listen to you, because you deserve the same kindness and respect that you give us.</p>
+<p>I notice the little things too: the way you come to get us when we’re somewhere else, the way you let us have some free time when our work is finished, and the calm way you keep teaching us new things every day.</p>
+<p>Thank you for making my start at this school easier. Thank you for helping me learn Python without ever making me feel like I should have known it already. And thank you for being the kind of teacher with whom making a mistake doesn’t feel frightening — it just feels like another step in learning.</p>
+<p>You are a wonderful Computer teacher, but more than that, you are such a genuinely sweet and beautiful person. I’m really happy I got to be your student.</p>
+<p><strong>Happy Teacher’s Day, Ms. Dahlia. 💙</strong></p>
+<div class="signature">With love and appreciation,<br>Zoha Salahuddin · 11-P</div>
+</article>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<span class="badge">One last thing</span>
+<h2>There’s a <span class="gradient">secret message</span> in here.</h2>
+<p class="lead">Tap the heart.</p>
+<div class="heart" onclick="secret(event)">💙</div>
+<div id="secret">If kindness were a programming language, I think you’d be completely fluent in it. Thank you for making the classroom feel safe enough to learn, ask, try, fail, and try again. ✨</div>
+</div>
+</section>
+
+<footer>Made with a ridiculous amount of appreciation by Zoha · 11-P 💻💙</footer>
+<script>
+function start(){burst(innerWidth/2,innerHeight*.65);document.querySelector('#memories').scrollIntoView({behavior:'smooth'})}
+function toggle(el,e){el.classList.toggle('active');burst(e.clientX||innerWidth/2,e.clientY||innerHeight/2)}
+function answer(ok){let a=document.getElementById('answer');a.textContent=ok?'✓ Correct. That’s exactly what Ms. Dahlia did for me. 💙':'Syntax error 😭 Try the answer that sounds like Ms. Dahlia.';if(ok)burst(innerWidth/2,innerHeight/2)}
+function secret(e){document.getElementById('secret').classList.add('show');burst(e.clientX,e.clientY)}
+function burst(x,y){for(let i=0;i<18;i++){let p=document.createElement('span');p.className='particle';p.textContent=['✦','0','1','♡'][Math.floor(Math.random()*4)];p.style.left=x+'px';p.style.top=y+'px';p.style.setProperty('--x',(Math.random()*240-120)+'px');p.style.setProperty('--y',(Math.random()*-220-30)+'px');document.body.appendChild(p);setTimeout(()=>p.remove(),1300)}}
+addEventListener('scroll',()=>{let d=document.documentElement;document.getElementById('progress').style.width=(100*d.scrollTop/(d.scrollHeight-d.clientHeight))+'%'})
+</script>
+</body>
+</html>
